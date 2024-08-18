@@ -8,7 +8,7 @@ on:
       - main
 
 env:
-  ACI_REGION: 'west us'                                     # set this to your preferred ACI region, e.g. west us
+  ACI_REGION: 'westus'                                     # set this to your preferred ACI region, e.g. west us
   ACI_NAME: aci-github-actions-example-nodejs               # set this to your ACI name
   ACI_REPOSITORY: github-actions-example-nodejs-repository  # set this to your ACI repository name
 
