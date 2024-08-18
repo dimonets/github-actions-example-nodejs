@@ -11,7 +11,7 @@ Following the guide: https://medium.com/@enelakuffo/deploying-a-node-js-applicat
 
 Note:
 1. Make sure to setup actions repository secrets in GitHub project for AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY
-2. Make sure security group has inboud rule to allow traffic on 8080 and outbound rule to allow traffic to 587 (for ECR access)
+2. Make sure security group has inboud rule to allow traffic on 80 and outbound rule to allow traffic to 587 (for ECR access)
 3. Make sure task execution role has correct policies:
 
 ```
@@ -34,6 +34,17 @@ Note:
 }
 ```
 
-Live URL: http://ip:8080/hello
+Live URL: http://ip-address
 
 ![Deploy to AWS ECS Fargate Workflow](https://github.com/dimonets/github-actions-example-nodejs/actions/workflows/deploy-aws-ecs-fargate.yml/badge.svg)
+
+### Deploy to Azure ACI Workflow (CD)
+Following the guide: https://learn.microsoft.com/en-us/azure/container-instances/container-instances-github-action#code-try-0
+
+Note:
+1. Make sure to setup actions repository secrets in GitHub project for AZURE_CREDENTIALS, REGISTRY_LOGIN_SERVER, REGISTRY_USERNAME, REGISTRY_PASSWORD and RESOURCE_GROUP
+2. Only ports 80 and 587 can be used with ACI
+
+Live URL: http://ip-address
+
+![Deploy to Azure ACI Workflow](https://github.com/dimonets/github-actions-example-nodejs/actions/workflows/deploy-azure-aci.yml/badge.svg)
