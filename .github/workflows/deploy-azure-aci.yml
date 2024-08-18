@@ -8,9 +8,9 @@ on:
       - main
 
 env:
-  ACI_LOCATION: 'west us'                                   # set this to your preferred ACI region, e.g. west us
-  ACI_NAME: aci-github-actions-example-nodejs               # set this to your ACI name
-  ACI_REPOSITORY: github-actions-example-nodejs-repository  # set this to your ACI repository name
+  ACI_LOCATION: 'west us'                          # set this to your preferred ACI region, e.g. west us
+  ACI_NAME: aci-github-actions-example-nodejs      # set this to your ACI name
+  ACI_IMAGE: github-actions-example-nodejs         # set this to your ACI image name
 
 jobs:
   build-and-deploy:
@@ -34,15 +34,15 @@ jobs:
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
       - run: |
-          docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ env.ACI_REPOSITORY }}:${{ github.sha }}
-          docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ env.ACI_REPOSITORY }}:${{ github.sha }}
+          docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ env.ACI_IMAGE }}:${{ github.sha }}
+          docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ env.ACI_IMAGE }}:${{ github.sha }}
 
       - name: 'Deploy to Azure Container Instances'
         uses: 'azure/aci-deploy@v1'
         with:
           resource-group: ${{ secrets.RESOURCE_GROUP }}
           dns-name-label: ${{ secrets.RESOURCE_GROUP }}${{ github.run_number }}
-          image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ env.ACI_REPOSITORY }}:${{ github.sha }}
+          image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ env.ACI_IMAGE }}:${{ github.sha }}
           registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
           registry-username: ${{ secrets.REGISTRY_USERNAME }}
           registry-password: ${{ secrets.REGISTRY_PASSWORD }}
