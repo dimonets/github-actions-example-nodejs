@@ -2,12 +2,12 @@
 Example CI/CD workflow implementation for NodeJS app using GitHub Actions
 
 ### Build and Test Workflow (CI)
-Following the guide: https://dev.to/olumidenwosu/implementing-continuous-integration-for-nodejs-apps-with-github-actions-1ag2
+More info: https://dev.to/olumidenwosu/implementing-continuous-integration-for-nodejs-apps-with-github-actions-1ag2
 
 ![Build and Test Workflow](https://github.com/dimonets/github-actions-example-nodejs/actions/workflows/build-and-test.yml/badge.svg)
 
 ### Deploy to AWS ECS Fargate Workflow (CD)
-Following the guide: https://medium.com/@enelakuffo/deploying-a-node-js-application-to-aws-ecs-fargate-with-github-actions-8a350616b979
+More info: https://medium.com/@enelakuffo/deploying-a-node-js-application-to-aws-ecs-fargate-with-github-actions-8a350616b979
 
 Note:
 1. Make sure to setup actions repository secrets in GitHub project for AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY
@@ -39,7 +39,7 @@ Live URL: http://ip-address
 ![Deploy to AWS ECS Fargate Workflow](https://github.com/dimonets/github-actions-example-nodejs/actions/workflows/deploy-aws-ecs-fargate.yml/badge.svg)
 
 ### Deploy to Azure ACI Workflow (CD)
-Following the guide: https://learn.microsoft.com/en-us/azure/container-instances/container-instances-github-action#code-try-0
+More info: https://learn.microsoft.com/en-us/azure/container-instances/container-instances-github-action#code-try-0
 
 Note:
 1. Make sure to setup actions repository secrets in GitHub project for AZURE_CREDENTIALS, REGISTRY_LOGIN_SERVER, REGISTRY_USERNAME, REGISTRY_PASSWORD and RESOURCE_GROUP
