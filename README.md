@@ -34,7 +34,7 @@ Note:
 }
 ```
 
-Live URL: http://ip-address
+Live URL: [find in AWS console]
 
 ![Deploy to AWS ECS Fargate Workflow](https://github.com/dimonets/github-actions-example-nodejs/actions/workflows/deploy-aws-ecs-fargate.yml/badge.svg)
 
@@ -43,8 +43,8 @@ More info: https://learn.microsoft.com/en-us/azure/container-instances/container
 
 Note:
 1. Make sure to setup actions repository secrets in GitHub project for AZURE_CREDENTIALS, REGISTRY_LOGIN_SERVER, REGISTRY_USERNAME, REGISTRY_PASSWORD and RESOURCE_GROUP
-2. Only ports 80 and 587 can be used with ACI
+2. Only ports 80 and 443 can be used with ACI
 
-Live URL: http://ip-address
+Live URL: [find in Azure portal]
 
 ![Deploy to Azure ACI Workflow](https://github.com/dimonets/github-actions-example-nodejs/actions/workflows/deploy-azure-aci.yml/badge.svg)
