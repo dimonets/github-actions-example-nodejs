@@ -25,7 +25,7 @@ name: Deploy to Amazon ECS Fargate
 
 on:
   workflow_run:
-    workflows: ['Build and Test']
+    workflows: ['Deploy to Azure ACI']
     types: [completed]
     branches:
       - main
@@ -41,8 +41,8 @@ env:
                                                             # containerDefinitions section of your task definition
 
 jobs:
-  deploy:
-    name: Deploy
+  build-and-deploy:
+    name: Build and Deploy
     runs-on: ubuntu-latest
     environment: production
 
