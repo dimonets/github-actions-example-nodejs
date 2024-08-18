@@ -1,7 +1,7 @@
 {
-  "name": "nodejs-cicd-test",
+  "name": "github-actions-example-nodejs",
   "version": "1.0.0",
-  "description": "",
+  "description": "Example CI/CD workflow implementation for NodeJS app using GitHub Actions.",
   "main": "index.js",
   "scripts": {
     "test": "jest",
