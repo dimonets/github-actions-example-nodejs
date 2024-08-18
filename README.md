@@ -1,4 +1,5 @@
 # github-actions-example-nodejs
+Example CI/CD workflow implementation for NodeJS app using GitHub Actions
 
 ### Build and Test Workflow (CI)
 Following the guide: https://dev.to/olumidenwosu/implementing-continuous-integration-for-nodejs-apps-with-github-actions-1ag2
